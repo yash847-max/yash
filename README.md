@@ -1,1 +1,480 @@
-# yash
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+	*{
+
+	margin:5px;
+	padding:5px;
+
+	 }
+	body{
+		background: url(https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9980.jpg);
+		background-size: 100% 722px;
+		
+
+	}
+
+	
+   #yash{
+        
+       height: 500px;
+       border: 5px solid;
+       border-color: rgba(43, 61, 255, 0.6);
+       border-radius: 300px;
+       border-right: 0px;
+       border-left: 1px;
+
+
+       
+
+
+   }
+
+   #name{
+      
+      color: skyblue;
+      font-family: monospace;
+      font-size: 35px;
+
+
+   }
+
+  #something{
+
+  	color: white;
+  	font-family: monospace;
+  	font-size: 70px;
+
+  }
+  #something2{
+  	color: white;
+  	font-family: monospace;
+  	font-size: 35px;
+
+  }
+
+  #some{
+  	color: white;
+  	font-family: monospace;
+  	font-size: 20px;
+  }
+
+  .na{
+  	color: rgba(43, 61, 255, 1.0);
+  }
+
+  p{
+
+  	color: white;
+  	font-family: monospace;
+  }
+  #navv{
+  display: flex; 
+  justify-content: space-between;
+   }
+
+  .navm{
+
+  	color: white;
+  	font-family: monospace;
+  	font-size: 23px;
+  	text-decoration: none;
+    
+  }
+
+  .navm:hover
+  {
+  	color: rgba(43, 61, 255, 1.0);
+  	text-decoration: underline;
+  }
+  .navm:active
+  {
+  	color: rgba(43, 61, 255, 1.0);
+  	text-decoration: underline;
+  }
+    
+ section{
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ }
+  #social{
+  	color: white;
+  }
+  .social1{
+  	color: white;
+  	text-decoration: none;
+  	font-weight: 900;
+  }
+  .social1:hover{
+  	color: rgba(43, 61, 255, 1.0);
+  	text-decoration: underline;
+  }
+  #social2{
+  	color: rgba(43, 61, 255, 1.0);
+  	border: 1px solid;
+  	border-color: rgba(43, 61, 255, 1.0);
+  	border-radius: 25px;
+  }
+  #social3{
+  	color: rgba(43, 61, 255, 1.0);
+  	border: 1px solid;
+  	border-color: rgba(43, 61, 255, 1.0);
+  	border-radius: 25px;
+
+  }  
+</style>
+</head>
+<body>
+	 <div id="navv">
+     <h2 id="name">YASHRAJ UPADHYAYA</h2>
+
+    
+     <nav id="kk">
+     	
+     	<a href="#navv" class="navm">HOME</a>
+     	<a href="#kil" class="navm">SKILL</a>
+     	<a href="#ED" class="navm">EDUCATION</a>
+     	<a href="#nn" class="navm">CONTACT</a>
+        
+     </nav>
+ </div>
+   <section id="ome">
+	<img src="C:\Users\y2117\OneDrive\Pictures\Screenshots\Screenshot 2024-12-19 035343.png" id="yash">
+
+	 <div id="line">
+		
+		<h1 id="something">Hi, I'm <span class="na"> Yash</span></h1>
+<h3 id="something2">A passionate <span class="na">Full-Stack Developer</span></h3> <p id="some">currently pursuing a BSc in Information Technology. I specialize in crafting seamless, user-friendly experiences on the frontend and building robust, efficient backend systems.
+
+Whether it's creating interactive web interfaces or optimizing backend architectures, I thrive on bringing ideas to life through code. Let's build something amazing together!</p>
+
+	</div>
+
+</section>
+	<div id="social">
+		
+		<a href="https://www.instagram.com/yash_is_ok/" class="social1"><i class="fa-brands fa-instagram" id="social2"></i>yash_is_ok</a>
+		
+		<a href="https://www.linkedin.com/in/yash-upadhyaya-810673342/" class="social1"><i class="fa-brands fa-linkedin" id="social3"></i>Yash upadhyaya</a>
+	
+	</div>
+
+	<div id="skills">
+
+		<style type="text/css">
+
+			*{
+
+	margin:5px;
+	padding:5px;
+
+	 }
+			
+			h2{
+				font-size: 40px;
+				font-family: monospace;
+				color: darkblue;
+				text-align: center;
+			}
+           
+            h3{
+            	font-family: monospace;
+            	font-size: 25px;
+            	color: white;
+            	padding: 25px;
+            }
+			
+			#sk{
+                
+                display: flex;
+                margin: auto;
+                width: 100px;
+                height: 100px;
+			}
+
+            #sk1{
+            	width: 100px;
+            	height: 150px;
+
+            	
+            }
+
+            #sk2{
+            	width: 100px;
+            	height: 150px;
+            	float: right;
+
+            }
+            
+            #sk3{
+            	width: 100px;
+            	height: 125px;
+            	display: flex;
+                margin: auto;
+            }
+
+        #imgg{
+        	border: 2px solid gray;
+        	background-color: rgba(0, 0, 0, 1.0);
+        	border-radius: 50px;
+
+
+        }
+
+        #flex1{
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        }
+
+
+        #skh{
+             font-family: "Gill Sans", sans-serif;
+             font-size: 25px;
+        }
+
+		</style>
+       
+
+        
+
+
+    <br><br><br>
+	<h2 id="kil">SKILLS</h2>
+
+	<br><br>
+		<div id="flex1">
+		<p id="skh">Skilled in full-stack web development,<br> I specialize in crafting responsive and user-friendly websites.<br> With expertise in frontend technologies like HTML, CSS, JavaScript, and modern frameworks,<br> combined with backend skills in Node.js, PHP, and database management,<br> I deliver efficient and scalable solutions for diverse web projects </p>
+
+		 
+		 <div id="imgg">
+
+		 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjNlaax-3ujBdlP5e3iL84QxChAizYk8tF9A&s" id="sk" >
+		 
+		 <div id="sp">
+		 <img src="https://wisetrolley.com/wp-content/uploads/2023/03/CSS-T-shirt-Black-2.jpg" id="sk1" >
+		 
+		 <img src="https://static.vecteezy.com/system/resources/previews/012/194/385/non_2x/js-letter-logo-design-with-black-background-in-illustrator-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" id="sk2">
+		 </div>
+		 
+		 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRgfZ2sG6xWL_Ag0kASTIytHshA2F419syVg&s" id="sk3" >
+
+
+
+
+
+	</div>
+
+	</div>
+
+	<br><br><br>
+	<br><br>
+<style type="text/css">
+
+	#ED{
+		font-size: 40px;
+				font-family: monospace;
+				color: darkblue;
+				text-align: left;
+				padding: 20px;
+
+	}
+
+    .cjc{
+    	border: 1px solid rgba(43, 61, 255, 1.0);
+    	border-radius: 5px;
+    	width: 800px;
+    	padding: 20px;
+        box-shadow: 4px 4px 4px 4px rgba(43, 61, 255, 0.6) ;
+        margin-top: 40px;
+    }
+
+    .scl{
+    	font-size: 30px;
+    	color: white;
+
+    }
+   .yer{
+   	color: rgba(43, 61, 255, 1.0);
+   		font-size: 25px ;
+   }
+   .stm{color: white;
+   		font-size: 20px ;
+        
+   }
+   
+   #edu{
+   	display: block;
+
+   }
+
+</style>
+
+
+
+<h2 id="ED">EDUCATION</h2>
+<section id="edu">
+	<div class="cjc">
+		<h2 class="scl">CONCEPT SENIOR SECONDARY SCHOOL</h2>
+		<h3 class="yer">2021-2023</h3>
+		<p class="stm">stream-science sub- PCMCS</p>
+	</div>
+
+	<div class="cjc">
+		<h2 class="scl">LALIT CHANDRA BHARALI COLLEGE</h2>
+		<h3 class="yer">2024-2027</h3>
+		<p class="stm">Bachelor of Science in Information Technology</p>
+	</div>
+</section>
+<br><br><br><br>
+<div id="contact1">
+	<div class="container1">
+		<div class="row1">
+			<div class="contact-left">
+
+				     <h1 class="sub-title" id="nn">contact me </h1>
+                     <p class="jj"><i class="fa-regular fa-paper-plane"></i>y21179715@gmail.com</p>
+                     <p class="jj"><i class="fa-solid fa-phone"></i>8473993051</p>
+                     <div class="social-icon"> 
+                     <a href=""><i class="fa-brands fa-instagram"></i></a>
+                      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                       
+                    </div>                     
+			</div>
+			<div class="contact-right">
+				<form name="submit-to-google-sheet">
+				<input type="text" name="name" placeholder="your name" class="bug1" required><hr class="bug2">
+				<input type="email" name="email" placeholder="your email" required class="bug1"><hr class="bug2">
+				<textarea name="message" rows="6" placeholder="your message" class="bug1"></textarea><hr class="bug2">
+				<button type="sumbit" class="btn2"><p id="bb">sumbit</p></button>
+                </form>
+
+			</div>
+		</div>
+		
+	</div>
+	
+ 
+
+</div>
+
+<style type="text/css">
+
+	.jj{
+		font-size: 24px;
+	}
+    
+    #nn{
+
+    	font-family: monospace;
+    	font-size: 50px;
+    	color: darkblue;
+    }
+
+	#bb{
+
+		font-family: monospace;
+		font-size: 24px;
+	}
+	
+.contact-left{
+
+	flex-basis: 35%;
+
+
+}
+.contact-right{
+	flex-basis: 60%;
+	
+	
+
+}
+.contact-left p{
+	margin-top: 30px;
+}
+
+.contact-left p i{
+
+	color: rgba(43, 61, 255, 1.0);
+	margin-right: 15px;
+	font-size: 25px;
+}
+
+.social-icon{
+	margin-top: 30px;
+}
+
+.social-icon a {
+	text-decoration: none;
+	font-size: 30px;
+	margin-right: 15px;
+	color: white;
+	display: inline-block;
+	transition: transform 0.5s;
+}
+.social-icon a:hover{
+	color: blue;
+	transform: translateY(-5px);
+}
+
+.btn2{
+	background: rgba(8, 38, 87, 0.8);
+	width: 250px;
+    height: 100px;
+	border-radius: 25px;
+	border-color: black;
+	margin-right: 45%;
+}
+ 
+ .contact-right form{
+
+ 	/*width: 100%;*/
+ }
+
+ form input,form textarea{
+     
+ 	/*width: 100%;*/
+ 	border: 0;
+ 	outline: none;
+ 	background: grey;
+ 	/*padding: 15px;*/
+ 	/*margin: 15px 0;
+ 	color: whitesmoke;
+ 	font-size: 18px;
+ 	border-radius: 6px;
+ 	width: 300px;*/
+ }
+.bug1{
+	width: 100%;
+    border: 0;
+ 	outline: none;
+ 	background: rgba(43, 61, 255, 0.2);
+ 	padding: 15px;
+ 	margin: 15px 0;
+ 	color: black;
+ 	font-size: 18px;
+ 	border-radius: 6px;
+ }
+ .bug2{
+ 	display: none;
+ }
+</style>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwnEri8WolzhncC6GQlDLlRM3x11FUjfqnGeoLIg9BdypaOf2eqtxdJZtSru277M_llDw/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
