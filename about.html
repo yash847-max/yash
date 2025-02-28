@@ -5,24 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+     body {
+    background: url('back2.jpg') no-repeat center center fixed;
+    background-size: cover;
+       }
+
+
+
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+    outline: none; /* Removes default outline */
+    user-select: none; /* Prevents selection on double-click */
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.1);
+}
+
+/* Remove blue highlight on click */
+.btn:active {
+    background: rgba(255, 255, 255, 0.08); /* Slightly darker effect */
+    transform: scale(1.05); /* Small press effect */
+    border-color: rgba(255, 255, 255, 0.4);
+}
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background: url('back2.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
+            background-color: #121212;
+            color: #fff;
             text-align: center;
             padding: 20px;
             overflow-x: hidden;
         }
-
         .profile-img {
             width: 220px;
             height: 220px;
@@ -31,27 +90,22 @@
             border: 4px solid #fff;
             margin-bottom: 15px;
         }
-
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
-
         p {
             color: #bbb;
             max-width: 600px;
             line-height: 1.6;
             margin: auto;
-            font-size: 1.1rem;
         }
-
         .skills-container {
             margin-top: 40px;
             display: flex;
             flex-direction: column;
             gap: 50px;
         }
-
         .skill {
             display: flex;
             align-items: center;
@@ -66,90 +120,50 @@
             opacity: 0;
             transition: transform 0.8s ease-out, opacity 0.8s ease-out;
         }
-
         .skill:nth-child(even) {
             flex-direction: row-reverse;
             transform: translateX(100%);
         }
-
         .skill img {
             width: 120px;
             height: 120px;
             margin: 0 15px;
             border-radius: 5px;
         }
-
         .skill-description {
             text-align: left;
             max-width: 400px;
         }
-
         .skill h2 {
             margin-bottom: 8px;
             font-size: 20px;
         }
-
         .btn {
             display: inline-block;
             margin-top: 40px;
-            padding: 15px 35px;
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: #1f1f1f;
+            border: 2px solid #fff;
+            border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            position: relative;
-            overflow: hidden;
             transition: 0.3s ease-in-out;
-            backdrop-filter: blur(5px);
         }
-
         .btn:hover {
-            border-color: rgba(255, 255, 255, 0.5);
-            background: rgba(255, 255, 255, 0.05);
+            background: #007bff;
+            border-color: #007bff;
             transform: scale(1.1);
         }
 
-        /* Adjusting layout for Android */
-        @media screen and (max-width: 768px) {
-            .profile-img {
-                width: 280px;
-                height: 280px;
-            }
+        /* Adjust position of Node.js, CSS, and MongoDB */
+        .skill:nth-child(2) { margin-left: -30px; } /* CSS moves left */
+        .skill:nth-child(4) { margin-left: -30px; } /* Node.js moves left */
+        .skill:nth-child(6) { margin-left: -30px; } /* MongoDB moves left */
 
-            h1 {
-                font-size: 3rem;
-            }
-
-            p {
-                font-size: 1.3rem;
-            }
-
-            .skill {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px;
-            }
-
-            .skill img {
-                width: 160px;
-                height: 160px;
-                margin-bottom: 15px;
-            }
-
-            .skill h2 {
-                font-size: 24px;
-            }
-
-            .skill-description {
-                text-align: center;
-                font-size: 1.3rem;
-            }
-        }
-
+        /* Animation on scroll */
         .show {
             transform: translateX(0);
             opacity: 1;
