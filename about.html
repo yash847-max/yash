@@ -6,134 +6,168 @@
     <title>About Me</title>
     <style>
 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+     body {
+    background: url('back2.jpg') no-repeat center center fixed;
+    background-size: cover;
+       }
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: url('back2.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        overflow-x: hidden;
-    }
 
-    .profile-img {
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #fff;
-        margin-bottom: 15px;
-    }
 
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-    p {
-        color: #bbb;
-        max-width: 600px;
-        line-height: 1.6;
-        margin: auto;
-    }
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
-    .skills-container {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+    outline: none; /* Removes default outline */
+    user-select: none; /* Prevents selection on double-click */
+}
 
-    .skill {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #1f1f1f;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 700px;
-        margin: auto;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    }
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+}
 
-    .skill:nth-child(even) {
-        flex-direction: row-reverse;
-        transform: translateX(100%);
-    }
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
 
-    .skill img {
-        width: 120px;
-        height: 120px;
-        margin: 0 15px;
-        border-radius: 5px;
-    }
+.btn:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.1);
+}
 
-    .skill-description {
-        text-align: left;
-        max-width: 400px;
-    }
+/* Remove blue highlight on click */
+.btn:active {
+    background: rgba(255, 255, 255, 0.08); /* Slightly darker effect */
+    transform: scale(1.05); /* Small press effect */
+    border-color: rgba(255, 255, 255, 0.4);
+}
 
-    .skill h2 {
-        margin-bottom: 8px;
-        font-size: 20px;
-    }
-
-    /* Default Button */
-    .btn {
-        display: inline-block;
-        margin-top: 40px;
-        padding: 15px 35px;
-        font-size: 18px;
-        font-weight: 600;
-        color: #ffffff;
-        background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-radius: 10px;
-        cursor: pointer;
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        transition: 0.3s ease-in-out;
-        backdrop-filter: blur(5px);
-        outline: none; /* Removes default outline */
-        user-select: none; /* Prevents selection on double-click */
-    }
-
-    .btn:hover {
-        border-color: rgba(255, 255, 255, 0.5);
-        background: rgba(255, 255, 255, 0.05);
-        transform: scale(1.1);
-    }
-
-    .btn:active {
-        background: rgba(255, 255, 255, 0.08);
-        transform: scale(1.05);
-        border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    /* Responsive Design for Android */
-    @media screen and (max-width: 768px) {
-        .btn {
-            width: 80%; /* Wider button */
-            font-size: 20px; /* Larger text */
-            padding: 18px 40px; /* Bigger padding */
-            border-radius: 12px; /* More rounded */
-            display: block;
-            margin: 80px auto 0; /* More space from skills & centered */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-    }
+        body {
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #bbb;
+            max-width: 600px;
+            line-height: 1.6;
+            margin: auto;
+        }
+        .skills-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .skill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 700px;
+            margin: auto;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        }
+        .skill:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: translateX(100%);
+        }
+        .skill img {
+            width: 120px;
+            height: 120px;
+            margin: 0 15px;
+            border-radius: 5px;
+        }
+        .skill-description {
+            text-align: left;
+            max-width: 400px;
+        }
+        .skill h2 {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: #1f1f1f;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: #007bff;
+            border-color: #007bff;
+            transform: scale(1.1);
+        }
 
-    /* Animation on scroll */
-    .show {
-        transform: translateX(0);
-        opacity: 1;
-    }
+        /* Adjust position of Node.js, CSS, and MongoDB */
+        .skill:nth-child(2) { margin-left: -30px; } /* CSS moves left */
+        .skill:nth-child(4) { margin-left: -30px; } /* Node.js moves left */
+        .skill:nth-child(6) { margin-left: -30px; } /* MongoDB moves left */
 
+        /* Animation on scroll */
+        .show {
+            transform: translateX(0);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
