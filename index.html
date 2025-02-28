@@ -22,14 +22,15 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            padding: 20px;
             color: white;
             text-align: center;
         }
 
         /* Profile Image with Glow Animation */
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid white;
@@ -49,26 +50,30 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 10px;
         }
 
         p {
             color: #bbb;
+            font-size: 1rem;
             margin-bottom: 20px;
         }
 
         /* Buttons Container */
         .btn-container {
             display: flex;
-            gap: 15px; /* Space between buttons */
+            flex-direction: column; /* Makes buttons stack on small screens */
+            gap: 15px;
             margin-top: 20px;
+            width: 100%;
+            max-width: 350px;
         }
 
         /* Button Styling */
         .btn {
             display: inline-block;
-            padding: 15px 35px;
+            padding: 12px 30px;
             font-size: 18px;
             font-weight: 600;
             color: #ffffff;
@@ -83,13 +88,14 @@
             backdrop-filter: blur(5px);
             outline: none;
             user-select: none;
+            text-align: center;
         }
 
         /* Button Hover Effects */
         .btn:hover {
             border-color: rgba(255, 255, 255, 0.5);
             background: rgba(255, 255, 255, 0.05);
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         /* Button Light Animation */
@@ -114,6 +120,26 @@
             }
         }
 
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
