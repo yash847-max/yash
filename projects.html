@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+
+body {
+    background: url('https://img.freepik.com/free-vector/abstract-red-circle-black-background-technology_1142-9839.jpg?t=st=1740760026~exp=1740763626~hmac=4d9b850a71e420ae9bde1b7e315b0c14a05fa9f8a8819a754109ce3d299f04fb&w=1480') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+    outline: none; /* Removes default outline */
+    user-select: none; /* Prevents selection on double-click */
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.1);
+}
+
+/* Remove blue highlight on click */
+.btn:active {
+    background: rgba(255, 255, 255, 0.08); /* Slightly darker effect */
+    transform: scale(1.05); /* Small press effect */
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .project {
+            background: #1f1f1f;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            max-width: 500px;
+            text-align: left;
+        }
+        .project h2 {
+            margin-bottom: 5px;
+        }
+        .project p {
+            color: #bbb;
+            font-size: 14px;
+        }
+        .btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: #1f1f1f;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: #007bff;
+            border-color: #007bff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Projects</h1>
+
+    <div class="project">
+        <h2>🎸 Guitar Store Webpage</h2>
+        <p>A fun project where I created a website for selling guitars with interactive UI and smooth animations.</p>
+    </div>
+
+    <div class="project">
+        <h2>🎵 Private Music Streaming Web App</h2>
+        <p>A web app that allows 4-5 friends to share and stream music together.</p>
+    </div>
+
+    <div class="project">
+        <h2>📖 Personal Blog Website</h2>
+        <p>A blog site where I share my daily thoughts, built using Node.js and MongoDB.</p>
+    </div>
+
+    <a href="index.html" class="btn">Back to Home</a>
+
+</body>
+</html>
