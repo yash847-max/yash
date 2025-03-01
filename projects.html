@@ -49,28 +49,31 @@ h1 {
     font-size: 14px;
 }
 
-/* Flat Button */
+/* Rounded Button */
 .btn {
-    margin-top: 30px; /* Added more space above */
-    padding: 14px 30px; /* Increased padding */
+    margin-top: 30px; /* Adjusted space */
+    padding: 14px 30px;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background: #252525; /* Flat dark background */
-    border: 2px solid #444; /* Slight border */
-    border-radius: 8px; /* Smooth rounded edges */
+    background: #252525;
+    border: 2px solid #444;
+    border-radius: 50px !important; /* Fully rounded */
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    width: 200px; /* Set fixed width for better shape */
 }
 
-/* Button Hover Effect */
+/* Hover Effect */
 .btn:hover {
-    background: #ff4d4d; /* Dark red hover effect */
+    background: #ff4d4d;
     border-color: #ff4d4d;
 }
 
-/* Responsive Adjustments for Android */
+/* Ensure Android Devices Render Rounded Button */
 @media screen and (max-width: 768px) {
     .project {
         max-width: 90%;
@@ -81,14 +84,14 @@ h1 {
     }
 
     .btn {
-        width: 90%; /* Full width button with some margin */
+        width: 90%; /* Make button take up most of the width */
         font-size: 18px;
         padding: 15px 30px;
-        border-radius: 50px; /* More rounded shape */
-        margin-top: 50px; /* Adjust spacing */
+        border-radius: 50px !important; /* Ensures full roundness */
+        margin-top: 50px;
+        -webkit-border-radius: 50px; /* For Safari/Android */
     }
 }
-
 
     </style>
 </head>
@@ -97,7 +100,7 @@ h1 {
     <h1>My Projects</h1>
 
     <div class="project">
-        <h2>🎸 Guitar Store Webpage</h2>
+        <h2>🎸 Guitar selling Store Webpage</h2>
         <p>A fun project where I created a website for selling guitars with interactive UI and smooth animations.</p>
     </div>
 
