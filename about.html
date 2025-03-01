@@ -5,143 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-
-     body {
-    background: url('https://img.freepik.com/free-vector/abstract-red-circle-black-background-technology_1142-9839.jpg?t=st=1740760026~exp=1740763626~hmac=4d9b850a71e420ae9bde1b7e315b0c14a05fa9f8a8819a754109ce3d299f04fb&w=1480') no-repeat center center fixed;
-    background-size: cover;
-       }
-
-
-
-       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 15px 35px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s ease-in-out;
-    backdrop-filter: blur(5px);
-    outline: none; /* Removes default outline */
-    user-select: none; /* Prevents selection on double-click */
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    transition: 0.3s ease-in-out;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 10px;
-}
-
-.btn:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.btn:hover {
-    border-color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.05);
-    transform: scale(1.1);
-}
-
-/* Remove blue highlight on click */
-.btn:active {
-    background: rgba(255, 255, 255, 0.08); /* Slightly darker effect */
-    transform: scale(1.05); /* Small press effect */
-    border-color: rgba(255, 255, 255, 0.4);
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
+
         body {
-            background-color: #121212;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://img.freepik.com/free-vector/abstract-red-circle-black-background-technology_1142-9839.jpg?t=st=1740760026~exp=1740763626~hmac=4d9b850a71e420ae9bde1b7e315b0c14a05fa9f8a8819a754109ce3d299f04fb&w=1480') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             text-align: center;
             padding: 20px;
-            overflow-x: hidden;
         }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
         .profile-img {
-            width: 220px;
-            height: 220px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #fff;
-            margin-bottom: 15px;
+            display: block;
+            margin: 0 auto 15px;
         }
+
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 10px;
         }
+
         p {
             color: #bbb;
             max-width: 600px;
-            line-height: 1.6;
             margin: auto;
+            line-height: 1.6;
         }
+
         .skills-container {
             margin-top: 40px;
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 20px;
         }
+
         .skill {
             display: flex;
             align-items: center;
             justify-content: center;
             background: #1f1f1f;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             width: 90%;
             max-width: 700px;
             margin: auto;
-            transform: translateX(-100%);
             opacity: 0;
-            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+            transform: translateY(50px);
+            transition: all 0.5s ease-out;
         }
-        .skill:nth-child(even) {
-            flex-direction: row-reverse;
-            transform: translateX(100%);
-        }
+
         .skill img {
-            width: 120px;
-            height: 120px;
-            margin: 0 15px;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
             border-radius: 5px;
         }
+
         .skill-description {
             text-align: left;
             max-width: 400px;
         }
+
         .skill h2 {
-            margin-bottom: 8px;
-            font-size: 20px;
+            font-size: 18px;
+            margin-bottom: 5px;
         }
+
         .btn {
             display: inline-block;
-            margin-top: 40px;
-            padding: 12px 25px;
+            margin-top: 50px;
+            padding: 12px 30px;
             font-size: 16px;
             font-weight: bold;
             color: #fff;
@@ -152,121 +103,126 @@ body {
             text-decoration: none;
             transition: 0.3s ease-in-out;
         }
+
         .btn:hover {
             background: #007bff;
             border-color: #007bff;
             transform: scale(1.1);
         }
 
-        /* Adjust position of Node.js, CSS, and MongoDB */
-        .skill:nth-child(2) { margin-left: -30px; } /* CSS moves left */
-        .skill:nth-child(4) { margin-left: -30px; } /* Node.js moves left */
-        .skill:nth-child(6) { margin-left: -30px; } /* MongoDB moves left */
-
-        /* Animation on scroll */
         .show {
-            transform: translateX(0);
             opacity: 1;
+            transform: translateY(0);
         }
 
-        .btn {
-    display: inline-block;
-    margin-top: 150px; /* Increased from 40px to 80px */
-    padding: 15px 35px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background: #1f1f1f;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-}
+        /* ===== MEDIA QUERY FOR MOBILE ===== */
+        @media screen and (max-width: 768px) {
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
 
-.btn:hover {
-    background: #007bff;
-    border-color: #007bff;
-    transform: scale(1.1);
-}
+            h1 {
+                font-size: 1.8rem;
+            }
 
+            .skill {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .skill img {
+                margin-bottom: 10px;
+            }
+
+            .btn {
+                margin-top: 30px;
+                display: block;
+                text-align: center;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <img src="C:\Users\y2117\Downloads\myself-removebg-preview (1).png" alt="Your Profile Picture" class="profile-img">
-    
-    <h1>About Me</h1>
-    <p>I'm Yash, a passionate Full-Stack Developer skilled in modern web technologies.  
-        I enjoy building dynamic and interactive web applications, constantly learning and pushing my limits.</p>
+    <div class="container">
+        <img src="C:\Users\y2117\Downloads\myself-removebg-preview (1).png" alt="Your Profile Picture" class="profile-img">
+        
+        <h1>About Me</h1>
+        <p>I'm Yash, a passionate Full-Stack Developer skilled in modern web technologies.  
+            I enjoy building dynamic and interactive web applications, constantly learning and pushing my limits.</p>
 
-    <h2 style="margin-top: 40px;">My Skills</h2>
-    
-    <div class="skills-container">
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML">
-            <div class="skill-description">
-                <h2>HTML</h2>
-                <p>I use HTML to structure web pages efficiently and ensure semantic accuracy for better SEO and accessibility.</p>
+        <h2 style="margin-top: 40px;">My Skills</h2>
+        
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML">
+                <div class="skill-description">
+                    <h2>HTML</h2>
+                    <p>I use HTML to structure web pages efficiently and ensure semantic accuracy for better SEO and accessibility.</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+                <div class="skill-description">
+                    <h2>CSS</h2>
+                    <p>With CSS, I create visually appealing layouts, animations, and responsive designs for a great user experience.</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+                <div class="skill-description">
+                    <h2>JavaScript</h2>
+                    <p>JavaScript allows me to build dynamic, interactive, and high-performance web applications.</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js">
+                <div class="skill-description">
+                    <h2>Node.js</h2>
+                    <p>I use Node.js to build scalable and fast backend services with real-time capabilities.</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJcB4K9EY3wAmEOtTjoJlVZ6xCaEOnc05saQ&s" alt="Express.js">
+                <div class="skill-description">
+                    <h2>Express.js</h2>
+                    <p>With Express.js, I build RESTful APIs, manage middleware, and handle server-side routing efficiently.</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/csit/2021/07/f5932bc2.jpg" alt="MongoDB">
+                <div class="skill-description">
+                    <h2>MongoDB</h2>
+                    <p>I use MongoDB Atlas for managing databases, handling large datasets, and optimizing queries.</p>
+                </div>
             </div>
         </div>
 
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
-            <div class="skill-description">
-                <h2>CSS</h2>
-                <p>With CSS, I create visually appealing layouts, animations, and responsive designs for a great user experience.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
-            <div class="skill-description">
-                <h2>JavaScript</h2>
-                <p>JavaScript allows me to build dynamic, interactive, and high-performance web applications.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js">
-            <div class="skill-description">
-                <h2>Node.js</h2>
-                <p>I use Node.js to build scalable and fast backend services with real-time capabilities.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJcB4K9EY3wAmEOtTjoJlVZ6xCaEOnc05saQ&s" alt="Express.js">
-            <div class="skill-description">
-                <h2>Express.js</h2>
-                <p>With Express.js, I build RESTful APIs, manage middleware, and handle server-side routing efficiently.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/csit/2021/07/f5932bc2.jpg" alt="MongoDB">
-            <div class="skill-description">
-                <h2>MongoDB</h2>
-                <p>I use MongoDB Atlas for managing databases, handling large datasets, and optimizing queries.</p>
-            </div>
-        </div>
+        <a href="index.html" class="btn">Back to Home</a>
     </div>
-
-    <a href="index.html" class="btn">Back to Home</a>
 
     <script>
         function revealSkills() {
             const skills = document.querySelectorAll('.skill');
             skills.forEach(skill => {
-                const skillTop = skill.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (skillTop < windowHeight - 50) {
+                if (skill.getBoundingClientRect().top < window.innerHeight - 50) {
                     skill.classList.add('show');
                 }
             });
         }
+
         window.addEventListener('scroll', revealSkills);
-        revealSkills(); // Call on load
+        revealSkills();
     </script>
 
 </body>
