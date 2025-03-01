@@ -168,6 +168,35 @@ body {
             transform: translateX(0);
             opacity: 1;
         }
+        @media screen and (max-width: 768px) {
+    /* Center profile image */
+    .profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .profile-img {
+        width: 180px; /* Slightly smaller for better fit */
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    /* Ensure button is centered */
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: 80%; /* Adjust width for better touch experience */
+        max-width: 300px;
+        border-radius: 50px; /* Smoother rounded shape */
+    }
+}
+
     </style>
 </head>
 <body>
