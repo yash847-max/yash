@@ -21,10 +21,23 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             padding: 20px;
             color: white;
             text-align: center;
+            position: relative;
+        }
+
+        /* Add overlay to improve text readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
         }
 
         /* Profile Image with Glow Animation */
@@ -86,6 +99,7 @@
             overflow: hidden;
             transition: 0.3s ease-in-out;
             backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px); /* For Safari support */
             outline: none;
             user-select: none;
             text-align: center;
@@ -120,7 +134,7 @@
             }
         }
 
-        /* Responsive Design for Mobile */
+        /* Responsive Design for Mobile and Android */
         @media (max-width: 600px) {
             .profile-img {
                 width: 150px;
@@ -140,10 +154,48 @@
                 font-size: 16px;
             }
         }
+
+        /* Additional Android-specific adjustments */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+                border-width: 3px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 0.85rem;
+                margin-bottom: 15px;
+            }
+            
+            .btn-container {
+                gap: 12px;
+            }
+            
+            .btn {
+                padding: 10px 15px;
+                font-size: 15px;
+                border-width: 1px;
+            }
+        }
+
+        /* Fix for some Android browsers that have issues with vh units */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                height: -webkit-fill-available;
+            }
+        }
     </style>
 </head>
 <body>
-
     <img src="myself-removebg-preview (1).png" alt="Your Profile Picture" class="profile-img">
     <h1>Yash</h1>
     <p>Full-Stack Developer | Passionate about Web Technologies</p>
@@ -153,6 +205,5 @@
         <a href="projects.html" class="btn">Projects</a>
         <a href="contact.html" class="btn">Contact Me</a>
     </div>
-
 </body>
 </html>
