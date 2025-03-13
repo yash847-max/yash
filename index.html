@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TMS Provider</title>
-
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -19,6 +19,8 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Logo Styling */
@@ -29,36 +31,66 @@
             object-fit: cover;
         }
 
-        /* Fix Navbar on Mobile */
+        /* Custom Header Styling */
+        .navbar {
+            background-color: #28a745 !important; /* Green */
+        }
+
+        /* Custom Gradient Banner */
+        .banner {
+            background: linear-gradient(to right, #ff0000, #8000ff);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Card Styling */
+        .info-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Gradient */
+        .btn-gradient {
+            background: linear-gradient(to right, #ff0000, #008000);
+            color: white;
+            border: none;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.8;
+        }
+
+        /* Mobile Full-Screen Fix */
         @media (max-width: 768px) {
-            .navbar-nav {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                white-space: nowrap;
-                display: flex;
-                gap: 10px;
+            body {
+                height: 100vh; /* Make sure it covers the whole screen */
+                overflow-x: hidden;
             }
 
-            .navbar-nav::-webkit-scrollbar {
-                display: none;
+            .container {
+                flex-grow: 1;
             }
         }
     </style>
 </head>
 
-<body>
+<body class="bg-light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="rahul logo.jpg" alt="Rahul Logo" class="rhl">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto d-flex flex-row">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">New Order</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Mass Order</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
@@ -78,15 +110,15 @@
         </div>
     </div>
 
-    <!-- Info Cards -->
-    <div class="container mt-4">
+    <!-- Main Content Wrapper -->
+    <div class="container mt-4 d-flex flex-column flex-grow-1">
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="info-card d-flex align-items-center">
                     <i class="fas fa-shopping-cart text-success fs-1 me-3"></i>
                     <div>
                         <p class="text-muted">TOTAL ORDERS ON RAHUL SMM</p>
-                        <p class="fw-bold fs-4">6361</p>
+                        <p class="fw-bold fs-4">1008156361</p>
                         <p class="text-secondary">4+ years experience providing SMM services!</p>
                     </div>
                 </div>
@@ -112,20 +144,18 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Buttons and Search -->
-    <div class="container mt-4">
-        <div class="d-flex flex-wrap gap-2">
-            <button class="btn btn-gradient px-4 py-2">New Order</button>
-            <button class="btn btn-primary px-4 py-2">Tutorial</button>
+        <!-- Buttons and Search -->
+        <div class="mt-4">
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-gradient px-4 py-2">New Order</button>
+                <button class="btn btn-primary px-4 py-2">Tutorial</button>
+            </div>
+            <input class="form-control mt-3" placeholder="Search for a service..." type="text">
         </div>
-        <input class="form-control mt-3" placeholder="Search for a service..." type="text">
-    </div>
 
-    <!-- Category & Services -->
-    <div class="container mt-4">
-        <div class="row g-4">
+        <!-- Category & Services -->
+        <div class="row g-4 mt-4">
             <div class="col-md-6">
                 <div class="info-card">
                     <p class="fw-bold text-warning">Category</p>
@@ -139,25 +169,25 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- News Section -->
-    <div class="container mt-4">
-        <div class="d-flex flex-wrap gap-2">
-            <button class="btn btn-gradient px-4 py-2">Important News</button>
-            <button class="btn btn-primary px-4 py-2">News & Updates</button>
+        <!-- News Section -->
+        <div class="mt-4">
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-gradient px-4 py-2">Important News</button>
+                <button class="btn btn-primary px-4 py-2">News & Updates</button>
+            </div>
         </div>
-    </div>
 
-    <div class="container mt-4">
-        <div class="info-card">
-            <h2 class="fw-bold text-dark mb-2">Join Our Premium WhatsApp Group!</h2>
-            <p class="text-dark mb-2">
-                To provide further assistance to help you reach your social media marketing goals, we have a WhatsApp group where all our customers can join.
-            </p>
-            <p class="text-dark">
-                Every user who joins the group is added to a list which makes them eligible to win $10 on their balance every Sunday at 10 pm GMT.
-            </p>
+        <div class="mt-4">
+            <div class="info-card">
+                <h2 class="fw-bold text-dark mb-2">Join Our Premium WhatsApp Group!</h2>
+                <p class="text-dark mb-2">
+                    To provide further assistance to help you reach your social media marketing goals, we have a WhatsApp group where all our customers can join.
+                </p>
+                <p class="text-dark">
+                    Every user who joins the group is added to a list which makes them eligible to win $10 on their balance every Sunday at 10 pm GMT.
+                </p>
+            </div>
         </div>
     </div>
 
