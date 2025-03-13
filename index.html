@@ -2,197 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TMS Provider</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- FontAwesome (For Icons) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-    <style>
-        /* Ensure Full Page Coverage */
-        html, body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Logo Styling */
-        .rhl {
-            width: 150px;
-            height: 50px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        /* Custom Header Styling */
-        .navbar {
-            background-color: #28a745 !important; /* Green */
-        }
-
-        /* Custom Gradient Banner */
-        .banner {
-            background: linear-gradient(to right, #ff0000, #8000ff);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        /* Card Styling */
-        .info-card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Button Gradient */
-        .btn-gradient {
-            background: linear-gradient(to right, #ff0000, #008000);
-            color: white;
-            border: none;
-        }
-
-        .btn-gradient:hover {
-            opacity: 0.8;
-        }
-
-        /* Mobile Full-Screen Fix */
-        @media (max-width: 768px) {
-            body {
-                height: 100vh; /* Make sure it covers the whole screen */
-                overflow-x: hidden;
-            }
-
-            .container {
-                flex-grow: 1;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
-<body class="bg-light">
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="rahul logo.jpg" alt="Rahul Logo" class="rhl">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">New Order</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Mass Order</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Add Funds</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tickets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">API</a></li>
-                </ul>
-            </div>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="flex flex-col md:flex-row items-center max-w-4xl w-full p-4">
+        <div class="md:w-1/2 text-center md:text-left p-4">
+            <p class="text-gray-600">Live Data: Updated Today</p>
+            <span class="bg-red-600 text-white px-2 py-1 rounded-full text-sm">LIVE</span>
+            <h1 class="mt-4 text-2xl font-bold text-orange-600">Indian Smm Bulk</h1>
+            <p class="text-lg text-gray-800">The Indian Cheapest SmmWholesaler Panel</p>
+            <p class="mt-2 text-xl font-bold bg-yellow-300 px-2 inline-block">The Market Leader</p>
         </div>
-    </nav>
 
-    <!-- Banner -->
-    <div class="container mt-3">
-        <div class="banner">
-            <a class="fw-bold text-white" href="#">CLICK TO JOIN OUR WHATSAPP GROUP</a>
+        <div class="bg-white shadow-md rounded-lg p-8 md:w-1/2 w-full mt-8 md:mt-0">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Sign In</h2>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700"><i class="fas fa-user text-purple-600"></i> Username</label>
+                    <input class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500" type="text" placeholder="Username">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700"><i class="fas fa-lock text-green-600"></i> Password</label>
+                    <input class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500" type="password" placeholder="Password">
+                </div>
+                <div class="mb-4 flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <label class="text-gray-700">Remember me</label>
+                </div>
+                <button type="button" onclick="location.href='home.html'" class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                    Log In
+                </button>
+                
+                
+                <div class="mt-4 text-center">
+                    <a href="#" class="text-orange-500 hover:underline">Forgot Password?</a>
+                </div>
+                <div class="mt-4 text-center">
+                    <p class="text-gray-700">No account? <a href="#" class="text-orange-500 hover:underline">Sign Up</a></p>
+                </div>
+                <button class="w-full bg-red-500 text-white py-2 rounded-lg mt-4 hover:bg-red-600 flex items-center justify-center">
+                    <i class="fab fa-google-plus-g mr-2"></i> Sign in with Google
+                </button>
+            </form>
         </div>
     </div>
-
-    <!-- Main Content Wrapper -->
-    <div class="container mt-4 d-flex flex-column flex-grow-1">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="info-card d-flex align-items-center">
-                    <i class="fas fa-shopping-cart text-success fs-1 me-3"></i>
-                    <div>
-                        <p class="text-muted">TOTAL ORDERS ON RAHUL SMM</p>
-                        <p class="fw-bold fs-4">6361</p>
-                        <p class="text-secondary">4+ years experience providing SMM services!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="info-card d-flex align-items-center">
-                    <i class="fas fa-wallet text-success fs-1 me-3"></i>
-                    <div>
-                        <p class="text-muted">AVAILABLE BALANCE</p>
-                        <p class="fw-bold fs-4">₹ 0</p>
-                        <p class="text-secondary">Add More fund Click here</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="info-card d-flex align-items-center">
-                    <i class="fas fa-user-check text-success fs-1 me-3"></i>
-                    <div>
-                        <p class="text-muted">VIEW YOUR ACCOUNT STATUS</p>
-                        <p class="fw-bold fs-4">NEW</p>
-                        <p class="text-secondary">Your total spending: ₹ 2256.2178</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Buttons and Search -->
-        <div class="mt-4">
-            <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-gradient px-4 py-2">New Order</button>
-                <button class="btn btn-primary px-4 py-2">Tutorial</button>
-            </div>
-            <input class="form-control mt-3" placeholder="Search for a service..." type="text">
-        </div>
-
-        <!-- Category & Services -->
-        <div class="row g-4 mt-4">
-            <div class="col-md-6">
-                <div class="info-card">
-                    <p class="fw-bold text-warning">Category</p>
-                    <p class="text-dark">⭐ Ramadan Special ⭐</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="info-card">
-                    <p class="fw-bold text-success">Service</p>
-                    <p class="text-dark">- Instagram Followers 100% Old Account With 15 Post [ NON~</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- News Section -->
-        <div class="mt-4">
-            <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-gradient px-4 py-2">Important News</button>
-                <button class="btn btn-primary px-4 py-2">News & Updates</button>
-            </div>
-        </div>
-
-        <div class="mt-4">
-            <div class="info-card">
-                <h2 class="fw-bold text-dark mb-2">Join Our Premium WhatsApp Group!</h2>
-                <p class="text-dark mb-2">
-                    To provide further assistance to help you reach your social media marketing goals, we have a WhatsApp group where all our customers can join.
-                </p>
-                <p class="text-dark">
-                    Every user who joins the group is added to a list which makes them eligible to win $10 on their balance every Sunday at 10 pm GMT.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
