@@ -1,213 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GIFTS2YOU</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
 
-    <!-- Font Awesome (Icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style2.css" />
-    <link rel="apple-touch-icon" href="logo.jpg" />
-    <link rel="shortcut icon" type="image/png" href="logo.jpg" />
-
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Navbar */
-      .navbar {
-        background-color: white !important;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar .navbar-brand,
-      .navbar-nav .nav-link {
-        color: black !important;
-      }
-
-      .navbar-nav .nav-link:hover {
-        color: #ff7e5f !important;
-      }
-
-      /* Hero Section */
-      .hero {
-        background: linear-gradient(to right, #ff7e5f, #feb47b);
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
-        margin-top: 56px; /* Adjusted to remove the gap */
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 10px auto;
-      }
-
-      .hero .btn {
-        background: white;
-        color: #ff7e5f;
-        font-weight: bold;
-        padding: 12px 24px;
-        border-radius: 8px;
-      }
-
-      /* Icon Boxes */
-      .icon-box i {
-        font-size: 2.5rem;
-        color: #ff7e5f;
-      }
-
-      .icon-box h3 {
-        font-size: 1.4rem;
-        margin-top: 15px;
-      }
-
-      .icon-box p {
-        color: #555;
-      }
-
-      /* Footer */
-      footer {
-        background-color: #222;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        font-size: 14px;
-        margin-top: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="logo.jpg" alt="gift2u Logo" class="me-2" height="30px" />
-          <span>gifts2u</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Rahul Media Boost</h1>
+    <nav>
+      <ul class="flex gap-4">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600">Services</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
-      <script
-        src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-        type="module"
-      ></script>
-      <dotlottie-player
-        src="https://lottie.host/67334046-ea79-45b5-97e0-fa039ee69688/7ldRhaPdQZ.lottie"
-        background="transparent"
-        speed="1"
-        style="width: 300px; height: 300px"
-        loop
-        autoplay
-      ></dotlottie-player>
+  <!-- Hero -->
+  <section class="text-center py-10 px-4 bg-blue-100">
+    <h2 class="text-3xl font-bold mb-2">Grow Your Social Presence Instantly</h2>
+    <p class="text-lg mb-4">Fast delivery, lifetime refill, trusted services</p>
 
-      <h1>Tohfe Jo Dil Se Baat Karein!</h1>
-      <p>
-        At <strong>gifts2u</strong>, we believe that every gift tells a story.
-        Whether it's a birthday, anniversary, festival, or just a small token of
-        love, we bring you thoughtfully curated gifts that make every moment
-        special.
-      </p>
+    <!-- Lottie Animation -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player 
+      src="https://assets6.lottiefiles.com/packages/lf20_qp1q7mct.json"  
+      background="transparent"  
+      speed="1"  
+      style="width: 300px; height: 300px; margin: 0 auto;"  
+      loop  
+      autoplay>
+    </lottie-player>
+  </section>
 
-      <a href="product.html" class="btn">View Collection</a>
-    </section>
+  <!-- Services Grid -->
+  <section class="py-10 px-4">
+    <h3 class="text-2xl font-bold mb-6 text-center">Our Services</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-    <!-- How It Works -->
-    <section class="container text-center py-5">
-      <h1 class="fw-bold mb-4">How it Works</h1>
-
-      <div class="row">
-        <div class="col-md-3">
-          <div class="icon-box">
-            <i class="fa-solid fa-gift"></i>
-          </div>
-          <h3>Choose a Gift</h3>
-          <p>
-            Select gifts/experiences on our website and order directly via
-            WhatsApp.
-          </p>
+      <!-- Cards -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsIg7Oo1Iaork71jI_MFIS5dAB9a74LAVJw&s" alt="YouTube" class="h-full object-contain" />
         </div>
-
-        <div class="col-md-3">
-          <div class="icon-box">
-            <i class="fa-solid fa-file"></i>
-          </div>
-          <h3>Customization</h3>
-          <p>Share your requirements, and we'll personalize it for you.</p>
-        </div>
-
-        <div class="col-md-3">
-          <div class="icon-box">
-            <i class="fa-solid fa-wallet"></i>
-          </div>
-          <h3>Make a Payment</h3>
-          <p>We accept Google Pay, PhonePe, Paytm, and bank transfers.</p>
-        </div>
-
-        <div class="col-md-3">
-          <div class="icon-box">
-            <i class="fa-solid fa-thumbs-up"></i>
-          </div>
-          <h3>Get in Touch</h3>
-          <p>
-            Connect via WhatsApp at <strong>7577841451</strong> or email
-            <a href="mailto:workwithrahul24@gmail.com">workwithrahul24@gmail.com</a>.
-          </p>
-        </div>
+        <h4 class="text-lg font-semibold">1K YouTube Subscribers [Non-Drop]</h4>
+        <p>50/100 Day | Lifetime Refill | Instant Start</p>
+        <p class="text-blue-600 font-bold mt-2">₹220</p>
       </div>
-    </section>
 
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsIg7Oo1Iaork71jI_MFIS5dAB9a74LAVJw&s" alt="YouTube" class="h-full object-contain" />
+        </div>
+        <h4 class="text-lg font-semibold">1K YouTube Subscribers [Non-Drop]</h4>
+        <p>300/500 Day | Lifetime Refill | 0-1 Hour Start</p>
+        <p class="text-blue-600 font-bold mt-2">₹250</p>
+      </div>
 
-    <!-- Footer -->
-    <footer>&copy; 2025 gifts2u. All rights reserved.</footer>
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsIg7Oo1Iaork71jI_MFIS5dAB9a74LAVJw&s" alt="YouTube" class="h-full object-contain" />
+        </div>
+        <h4 class="text-lg font-semibold">1K YouTube Subscribers [100% Non-Drop]</h4>
+        <p>1k/1500 Day | Lifetime Refill | Always Instant</p>
+        <p class="text-blue-600 font-bold mt-2">₹550</p>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBILdC5ouxGYjeaYJPmVqMsSpsItocXSI5A&s" alt="Facebook" class="h-full object-contain" />
+        </div>
+        <h4 class="text-lg font-semibold">1K Facebook Followers [Non-Drop]</h4>
+        <p>Page/Profile | Bullet Speed | Lifetime Refill</p>
+        <p class="text-blue-600 font-bold mt-2">₹120</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBILdC5ouxGYjeaYJPmVqMsSpsItocXSI5A&s" alt="Facebook" class="h-full object-contain" />
+        </div>
+        <h4 class="text-lg font-semibold">1K Facebook Video/Reels Views</h4>
+        <p>1 Min Retention | Ultra Fast | Lifetime Refill</p>
+        <p class="text-blue-600 font-bold mt-2">₹50</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYGK1sj6Ybm8uhae8QSfgNzGHLbTQWqaTnQ&s" alt="Instagram" class="h-full object-contain" />
+        </div>
+        <h4 class="text-lg font-semibold">1K Instagram Followers</h4>
+        <p>Old Account | 15 Posts | Non-Drop | Lifetime</p>
+        <p class="text-blue-600 font-bold mt-2">₹120</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-32 flex items-center justify-center bg-white mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYGK1sj6Ybm8uhae8QSfgNzGHLbTQWqaTnQ&s" alt="Instagram" class="h-full object-contain" />
+        </div>
+        <h4 class="text-lg font-semibold">1K Instagram Reels Views</h4>
+        <p>Ultra Fast 500k/1M | Lifetime | Instant Start</p>
+        <p class="text-blue-600 font-bold mt-2">₹5</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-white py-10 px-4 text-center">
+    <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+    <p>Reach out on WhatsApp or Telegram for orders and queries.</p>
+    <div class="mt-4 flex justify-center gap-4">
+      <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">WhatsApp</a>
+      <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Telegram</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center p-4 mt-10">
+    &copy; 2025 Rahul Media Boost. All rights reserved.
+  </footer>
+
+</body>
 </html>
-
-
-
