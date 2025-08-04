@@ -45,6 +45,7 @@
         }
 
         .hero-title {
+            font-family: 'Courier New', Courier, monospace;
             font-size: 3.5rem;
             font-weight: 800;
             color: var(--dark-gray);
@@ -113,7 +114,124 @@
             /* Ensures it's above other items */
         }
 
-       
+
+
+        .section-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: -60%;
+        }
+
+        .nxt1 {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: transparent;
+        }
+
+        .full-image {
+            width: 250px;
+            height: 600px;
+            object-fit: cover;
+            border: 3px solid white;
+            border-radius: 56px;
+            box-sizing: border-box;
+        }
+
+        .txt2 {
+            font-size: larger;
+            white-space: nowrap;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #333;
+            margin-bottom: 9%;
+            padding: 15%;
+            position: relative;
+        }
+
+        /* Blue Box Styles */
+        .blue-box {
+            width: 80%;
+            /* Adjusted for three boxes */
+            height: 280px;
+            background-color: #4A90E2;
+            border-radius: 18px;
+            margin-top: 200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Grey Box */
+        .blue-box::before {
+            content: "";
+            position: absolute;
+            left: 100%;
+            margin-left: 30px;
+            width: 100%;
+            height: 400px;
+            background-color: #e0e0e0;
+            border-radius: 18px;
+            top: -120px;
+            z-index: 0;
+            margin-left: 80%;
+        }
+
+        /* NEW Sky Blue Box */
+        .blue-box::after {
+            content: "";
+            position: absolute;
+            left: calc(100% + 80% + 60px);
+            /* Positions after grey box */
+            width: 100%;
+            height: 550px;
+            background-color: #87CEEB;
+            /* Sky blue */
+            margin-left: 180%;
+            border-radius: 18px;
+            top: -270px;
+            z-index: 0;
+        }
+
+        .txt2 p {
+            margin: 0;
+            line-height: 1.5;
+            position: relative;
+            z-index: 2;
+        }
+
+        #yash {
+            margin-left: 380%;
+            position: relative;
+            /* Changed from absolute */
+            top: -500px;
+            /* Adjust this negative value to move upward */
+            transform: translateY(0);
+            /* Reset transform */
+            z-index: 10;
+            
+            /* Optional: makes text more readable */
+            padding: 5px 10px;
+            /* Optional: adds spacing around text */
+            border-radius: 4px;
+            /* Optional: softens edges */
+        }
+        #yash2 {
+            margin-left: 335%;
+            position: relative;
+            /* Changed from absolute */
+            top: -500px;
+            /* Adjust this negative value to move upward */
+            transform: translateY(0);
+            /* Reset transform */
+            z-index: 10;
+            
+            /* Optional: makes text more readable */
+            padding: 5px 10px;
+            /* Optional: adds spacing around text */
+            border-radius: 4px;
+            /* Optional: softens edges */
+        }
 
 
         /* Responsive adjustments */
@@ -221,7 +339,8 @@
 
                 <!-- Left Content -->
                 <div class="col-lg-6 order-lg-1 order-2">
-                    <h1 class="hero-title"><span style="color: black;">Easy<br>Payment Solution</span></h1>
+                    <h1 class="hero-title"><span style="color: black;">Easy <i
+                                class="fa-regular fa-handshake"></i><br>Payment Solution </span></h1>
                     <p class="hero-subtitle"><span style="color: black; font-size: larger;"> Fast, Easy and
                             secure</span></p>
                     <p class="rotate-text" style="position: relative; left: 340px; top: 20px;">2023 @epay</p>
@@ -241,6 +360,22 @@
                     </iframe>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="section-center">
+        <div class="nxt1">
+            <img src="https://i.pinimg.com/736x/3f/44/2a/3f442a2d080910f10262f2b957d9e992.jpg" alt="Full Box Image"
+                class="full-image">
+            <div class="txt2">
+                <p>Process Payment Anywhere</p>
+                <p>with our global Payment</p>
+                <p>and mand ka tola jo na nacha</p>
+                <p>wo behen ka loda</p>
+                <div class="blue-box"></div>
+                <h1 id="yash">Arsif</h1>
+                <h1 id="yash2">Chuddakar</h1>
             </div>
         </div>
     </section>
