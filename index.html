@@ -1,117 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahul Media Boost</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epay - Easy Payment Solution</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #4A90E2;
+            --light-blue: #E8F4FD;
+            --dark-gray: #2C3E50;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--dark-gray) !important;
+        }
+
+        .navbar-brand span {
+            color: var(--primary-blue) !important;
+        }
+
+        .navbar-nav {
+            margin: 0 auto;
+            /* This centers the nav links */
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--light-blue) 0%, #F8E8FF 100%);
+            min-height: 90vh;
+            padding: 100px 0 60px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark-gray);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary-blue);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white !important;
+        }
+
+        .btn-primary-custom:hover {
+            background: #3a7bc8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom-blue {
+            background-color: white;
+            color: var(--primary-blue) !important;
+            border: 1px solid var(--primary-blue) !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-blue:hover {
+            background-color: var(--primary-blue) !important;
+            color: white !important;
+        }
+
+        .pinterest-embed {
+            margin-top: -20px;
+        }
+
+        .rotate-text {
+            transform: rotate(-90deg);
+            /* Rotate counterclockwise */
+            transform-origin: left top;
+            /* Pivot point */
+            display: inline-block;
+            /* So transform works properly */
+
+
+            /* Pulls it out of normal flow */
+            right: 20px;
+            /* Moves it to the right side */
+            top: 50%;
+            /* Vertically center (optional) */
+            transform: rotate(-90deg) translateY(-50%);
+            z-index: 999;
+            /* Ensures it's above other items */
+        }
+
+       
+
+
+        /* Responsive adjustments */
+        @media (max-width: 1199.98px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 80px 0 40px;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .navbar-nav {
+                margin: 0;
+                /* Reset margin for mobile */
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .navbar-collapse {
+                padding-top: 20px;
+            }
+
+            .navbar-nav {
+                margin-bottom: 15px;
+            }
+
+            .d-flex {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .btn-primary-custom,
+            .btn-custom-blue {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md px-6 py-6 flex justify-between items-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold">Rahul Media Boost</h1>
-    <nav>
-      <ul class="flex gap-10 md:gap-16 text-2xl md:text-4xl font-semibold">
-        <li><a href="#" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#" class="hover:text-blue-600">Services</a></li>
-        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
-      </ul>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span>e</span>pay
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto"> <!-- mx-auto centers the nav items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog"><span style="color: black;">Blog</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><span style="color: black;">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community"><span style="color: black;">Community</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#help"><span style="color: black;">Help center </span></a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
+                    <a href="#login" class="btn btn-custom-blue me-2">Login</a>
+                    <a href="#signup" class="btn btn-primary-custom">Sign Up</a>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-100 text-center py-20 px-6">
-    <h2 class="text-6xl md:text-8xl font-extrabold mb-8">Grow Your Social Presence Instantly</h2>
-    <p class="text-4xl md:text-5xl mb-12 font-medium">Fast delivery, lifetime refill, trusted services</p>
 
-    <!-- Lottie Animation -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <div class="flex justify-center">
-      <lottie-player 
-        src="https://assets6.lottiefiles.com/packages/lf20_qp1q7mct.json" 
-        background="transparent" 
-        speed="1" 
-        style="width: 100%; max-width: 1100px; height: auto;" 
-        loop 
-        autoplay>
-      </lottie-player>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
 
-  <!-- Services Section -->
-  <section class="py-24 px-6 md:px-20">
-    <h3 class="text-6xl md:text-7xl font-extrabold text-center mb-20">Our Services</h3>
+                <!-- Left Content -->
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <h1 class="hero-title"><span style="color: black;">Easy<br>Payment Solution</span></h1>
+                    <p class="hero-subtitle"><span style="color: black; font-size: larger;"> Fast, Easy and
+                            secure</span></p>
+                    <p class="rotate-text" style="position: relative; left: 340px; top: 20px;">2023 @epay</p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                    <h3>Neem ka pata kadwa ha arsif </h3>
+                    <h3>Arsif mia bhadwa haa</h3>
+                    <iframe src="https://assets.pinterest.com/ext/embed.html?id=19351473394503733" height="360"
+                        width="277" frameborder="0" scrolling="no" class="see" style="position: relative; top: 180px;">
+                    </iframe>
 
-      <!-- Service Cards (centered content) -->
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsIg7Oo1Iaork71jI_MFIS5dAB9a74LAVJw&s" alt="YouTube" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K YouTube Subs</h4>
-        <p class="text-gray-600 text-2xl mb-6">50/100 Day | Instant | Lifetime Refill</p>
-        <p class="text-blue-600 font-bold text-4xl">₹220</p>
-      </div>
+                </div>
 
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsIg7Oo1Iaork71jI_MFIS5dAB9a74LAVJw&s" alt="YouTube" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K YouTube Subs</h4>
-        <p class="text-gray-600 text-2xl mb-6">300/500 Day | Instant | Lifetime Refill</p>
-        <p class="text-blue-600 font-bold text-4xl">₹250</p>
-      </div>
+                <!-- Right Content -->
+                <div class="col-lg-6 order-lg-2 order-1 d-flex justify-content-center">
+                    <iframe src="https://assets.pinterest.com/ext/embed.html?id=22799541859526390" height="1180"
+                        width="736" frameborder="0" scrolling="no">
+                    </iframe>
+                </div>
 
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsIg7Oo1Iaork71jI_MFIS5dAB9a74LAVJw&s" alt="YouTube" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K YouTube Subs</h4>
-        <p class="text-gray-600 text-2xl mb-6">Fastest | 100% Non-Drop | Lifetime</p>
-        <p class="text-blue-600 font-bold text-4xl">₹550</p>
-      </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBILdC5ouxGYjeaYJPmVqMsSpsItocXSI5A&s" alt="Facebook" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K Facebook Followers</h4>
-        <p class="text-gray-600 text-2xl mb-6">Ultra Speed | Lifetime Refill</p>
-        <p class="text-blue-600 font-bold text-4xl">₹120</p>
-      </div>
-
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBILdC5ouxGYjeaYJPmVqMsSpsItocXSI5A&s" alt="Facebook Views" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K Facebook Reels Views</h4>
-        <p class="text-gray-600 text-2xl mb-6">1 Min Retention | Ultra Fast</p>
-        <p class="text-blue-600 font-bold text-4xl">₹50</p>
-      </div>
-
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYGK1sj6Ybm8uhae8QSfgNzGHLbTQWqaTnQ&s" alt="Instagram" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K Instagram Followers</h4>
-        <p class="text-gray-600 text-2xl mb-6">Old Accounts | 15 Posts | Lifetime</p>
-        <p class="text-blue-600 font-bold text-4xl">₹120</p>
-      </div>
-
-      <div class="bg-white rounded-3xl p-12 shadow-xl hover:shadow-2xl transition flex flex-col justify-center items-center h-[750px] text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYGK1sj6Ybm8uhae8QSfgNzGHLbTQWqaTnQ&s" alt="Instagram Views" class="w-56 mb-10" />
-        <h4 class="text-4xl font-semibold mb-4">1K Insta Reels Views</h4>
-        <p class="text-gray-600 text-2xl mb-6">Instant Start | High Retention</p>
-        <p class="text-blue-600 font-bold text-4xl">₹5</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="bg-white py-24 px-6 text-center">
-    <h3 class="text-6xl md:text-7xl font-bold mb-10">Contact Us</h3>
-    <p class="text-3xl md:text-4xl mb-12">WhatsApp or Telegram for orders</p>
-    <div class="flex justify-center gap-12 flex-wrap">
-      <a href="#" class="bg-green-500 text-white px-12 py-6 rounded-3xl text-3xl hover:bg-green-600 transition">WhatsApp</a>
-      <a href="#" class="bg-blue-500 text-white px-12 py-6 rounded-3xl text-3xl hover:bg-blue-600 transition">Telegram</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-200 text-center py-10 text-2xl md:text-3xl">
-    &copy; 2025 Rahul Media Boost. All rights reserved.
-  </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
